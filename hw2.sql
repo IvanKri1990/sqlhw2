@@ -32,6 +32,7 @@ create table if not exists Track (
 	id serial primary key,
 	track_name varchar(100) not null unique,
 	duration integer not null
+	album_id integer references Album(id)
 );
 
 create table if not exists Compendium (
